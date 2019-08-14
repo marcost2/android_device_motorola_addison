@@ -68,18 +68,29 @@ function blob_fixup() {
         sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${2}"
         ;;
 
-    vendor/lib/libmmcamera_vstab_module.so | vendor/lib/libmmcamera2_stats_modules.so)
+    vendor/lib/libmmcamera_vstab_module.so)
         patchelf --remove-needed libandroid.so "${2}"
         ;;
 
-    vendor/lib/lib_mottof.so | vendor/lib/libmmcamera_vstab_module.so | vendor/lib/libjscore.so | vendor/lib/libmmcamera_ppeiscore.so | vendor/lib/libmmcamera2_stats_modules.so)
+    vendor/lib/lib_mottof.so | vendor/lib/libmmcamera_vstab_module.so | vendor/lib/libjscore.so)
         sed -i "s/libgui/libwui/" "${2}"
         ;;
             
     vendor/lib/libcamerabgprocservice.so)
         patchelf --remove-needed libcamera_client.so "${2}"
         ;;
-    
+
+    vendor/lib/libcamerabgproc-jni.so)
+        "${PATCHELF}" --remove-needed libandroid_runtime.so "${2}"
+        "${PATCHELF}" --remove-needed libandroidfw.so "${2}"
+        "${PATCHELF}" --remove-needed libmedia.so "${2}"
+        "${PATCHELF}" --remove-needed libnativehelper.so "${2}"
+        "${PATCHELF}" --add-needed libjni_shim.so "${2}"
+        ;;
+
+    vendor/lib/libjustshoot.so | vendor/lib/libjscore.so)
+        "${PATCHELF}" --remove-needed libstagefright.so "${2}"
+        ;;
     # Patch libcutils dep into audio HAL
     vendor/lib/hw/audio.primary.msm8953.so)
         patchelf --replace-needed "libcutils.so" "libprocessgroup.so" "${2}"

@@ -388,7 +388,8 @@ PRODUCT_COPY_FILES += \
 # Shims
 PRODUCT_PACKAGES += \
     libqsapshim \
-    libshim_camera \
+    libjustshoot_shim \
+    libjni_shim \
     libmemset_shim \
     libcutils_shim
 
