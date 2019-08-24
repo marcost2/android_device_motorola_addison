@@ -98,6 +98,10 @@ function blob_fixup() {
         sed -i "s|/system/etc/zaf|/vendor/etc/zaf|g" "${2}"
         ;;
 
+    vendor/lib64/lib_fpc_tac_shared.so)
+        sed -i "s|/firmware/image|/vendor/f/image|g" "${2}"
+        ;;
+
     # memset shim
     vendor/bin/charge_only_mode)
         for  LIBMEMSET_SHIM in $(grep -L "libmemset_shim.so" "${2}"); do
