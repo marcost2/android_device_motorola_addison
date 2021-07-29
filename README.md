@@ -1,7 +1,7 @@
-Device Tree for Moto Z2 Play (albus)
+Device Tree for Moto Z2 Play (addison)
 ===========================================
 
-The Motorola Moto Z2 Play (codenamed _"albus"_) is a mid-range smartphone from Motorola mobility.
+The Motorola Moto Z2 Play (codenamed _"addison"_) is a mid-range smartphone from Motorola mobility.
 It was announced on June 2017.
 
 Basic   | Spec Sheet

@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=albus
+DEVICE=addison
 VENDOR=motorola
 
 # Load extract_utils and do some sanity checks
@@ -111,6 +111,6 @@ function blob_fixup() {
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-extract "${MY_DIR}/proprietary-files_albus.txt" "${SRC}" ${KANG} --section "${SECTION}"
+extract "${MY_DIR}/proprietary-files_addison.txt" "${SRC}" ${KANG} --section "${SECTION}"
 
 "${MY_DIR}/setup-makefiles.sh"

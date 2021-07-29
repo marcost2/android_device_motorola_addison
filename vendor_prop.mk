@@ -1,5 +1,5 @@
 #
-# vendor prop for albus
+# vendor prop for addison
 #
 
 # Audio
@@ -187,7 +187,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.mot_detect=true \
     ro.qti.sensors.multishake=true \
     ro.qti.sensors.sta_detect=true \
-    ro.hardware.sensors=albus \
+    ro.hardware.sensors=addison \
     ro.vendor.sensors.maghalcal=true \
     ro.vendor.sensors.amd=false \
     ro.vendor.sensors.pmd=false \

@@ -2,7 +2,7 @@
   {
     "repository":  "AICP/kernel_motorola_msm8953",
     "target_path": "kernel/motorola/msm8953",
-    "branch":      "r11.1-albus"
+    "branch":      "r11.1-addison"
   },
   {
     "repository":  "AICP/proprietary_vendor_motorola",
