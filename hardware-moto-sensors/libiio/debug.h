@@ -21,7 +21,7 @@
 
 #include <stdio.h>
 #ifdef ANDROID
-#include <cutils/log.h>
+#include <log/log.h>
 #endif
 
 #define NODEBUG_L 0
