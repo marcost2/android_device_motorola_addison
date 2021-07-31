@@ -303,7 +303,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
     ifeq ($(MOT_SENSOR_HUB_HW_TYPE_L4), true)
         ifneq ($(TARGET_BUILD_VARIANT),user)
             # Build libiio.so
-            LOCAL_REQUIRED_MODULES += libiio
+            LOCAL_REQUIRED_MODULES += mot_libiio
 
             # Build libiio tests/utilities
             LOCAL_REQUIRED_MODULES += iio_genxml iio_info iio_readdev iio_reg

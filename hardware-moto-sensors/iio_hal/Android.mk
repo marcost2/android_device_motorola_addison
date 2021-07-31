@@ -39,7 +39,7 @@ LOCAL_C_INCLUDES += \
     $(LOCAL_PATH)/.. \
     $(LOCAL_PATH)/../motosh_hal \
     system/core/base/include \
-    motorola/external/libiio \
+    $(LOCAL_PATH)/../libiio \
     external/libselinux/include \
     $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
@@ -48,7 +48,7 @@ LOCAL_C_INCLUDES += kernel/include
 
 LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
-LOCAL_SHARED_LIBRARIES += libiio libcrypto
+LOCAL_SHARED_LIBRARIES += mot_libiio libcrypto
 LOCAL_SHARED_LIBRARIES += liblog libcutils libutils libc libbase libselinux
 LOCAL_CFLAGS += -Wall -Wextra
 LOCAL_CXXFLAGS += -Weffc++ -std=c++14

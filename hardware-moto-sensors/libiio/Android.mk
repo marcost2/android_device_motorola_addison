@@ -2,12 +2,13 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libiio
+LOCAL_MODULE := mot_libiio
+LOCAL_VENDOR_MODULE := true
 LOCAL_SRC_FILES := channel.c device.c context.c buffer.c utilities.c
 LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter
 
 # LOG_LEVEL 0=off, 1=error, 2=warning, 3=info, 4=debug
-LOCAL_CFLAGS += -DLOG_LEVEL=4 -DLOG_TAG=\"libiio\"
+LOCAL_CFLAGS += -DLOG_LEVEL=4 -DLOG_TAG=\"mot_libiio\"
 LOCAL_SHARED_LIBRARIES += liblog
 
 LOCAL_CFLAGS += -fvisibility=hidden
@@ -51,7 +52,8 @@ LOCAL_MODULE := iio_genxml
 LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter
 LOCAL_CXXFLAGS += -Weffc++
 LOCAL_SRC_FILES := tests/iio_genxml.c
-LOCAL_SHARED_LIBRARIES := libiio
+LOCAL_SHARED_LIBRARIES := mot_libiio
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_EXECUTABLE)
 
@@ -63,7 +65,8 @@ LOCAL_MODULE := iio_info
 LOCAL_CFLAGS += -Wall -Wextra
 LOCAL_CXXFLAGS += -Weffc++
 LOCAL_SRC_FILES := tests/iio_info.c
-LOCAL_SHARED_LIBRARIES := libiio
+LOCAL_SHARED_LIBRARIES := mot_libiio
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_EXECUTABLE)
 
@@ -75,7 +78,8 @@ LOCAL_MODULE := iio_readdev
 LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter
 LOCAL_CXXFLAGS += -Weffc++
 LOCAL_SRC_FILES := tests/iio_readdev.c
-LOCAL_SHARED_LIBRARIES := libiio
+LOCAL_SHARED_LIBRARIES := mot_libiio
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_EXECUTABLE)
 
@@ -87,7 +91,8 @@ LOCAL_MODULE := iio_reg
 LOCAL_CFLAGS += -Wall -Wextra
 LOCAL_CXXFLAGS += -Weffc++
 LOCAL_SRC_FILES := tests/iio_reg.c
-LOCAL_SHARED_LIBRARIES := libiio
+LOCAL_SHARED_LIBRARIES := mot_libiio
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_EXECUTABLE)
 
