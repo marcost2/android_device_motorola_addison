@@ -64,6 +64,10 @@ fi
 function blob_fixup() {
     case "${1}" in
 
+    vendor/lib/libjustshoot.so)
+        "${PATCHELF}" --add-needed libjustshoot_shim.so "${2}"
+        ;;
+
     vendor/lib/libmmcamera2_sensor_modules.so)
         sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${2}"
         ;;
@@ -78,14 +82,6 @@ function blob_fixup() {
             
     vendor/lib/libcamerabgprocservice.so)
         patchelf --remove-needed libcamera_client.so "${2}"
-        ;;
-
-    vendor/lib/libcamerabgproc-jni.so)
-        "${PATCHELF}" --remove-needed libandroid_runtime.so "${2}"
-        "${PATCHELF}" --remove-needed libandroidfw.so "${2}"
-        "${PATCHELF}" --remove-needed libmedia.so "${2}"
-        "${PATCHELF}" --remove-needed libnativehelper.so "${2}"
-        "${PATCHELF}" --add-needed libjni_shim.so "${2}"
         ;;
 
     vendor/lib/libjustshoot.so | vendor/lib/libjscore.so)
