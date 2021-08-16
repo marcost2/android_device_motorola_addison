@@ -34,7 +34,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 PRODUCT_DEVICE := addison
 PRODUCT_NAME := aicp_addison
 PRODUCT_BRAND := Motorola
-PRODUCT_MODEL := Moto Z2 Play
+PRODUCT_MODEL := Moto Z Play
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := addison
 
@@ -44,10 +44,10 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="addison_retail-user 9 PPS29.133-30 ab8b4 release-keys" \
-    PRODUCT_NAME="Moto Z2 Play" \
+    PRIVATE_BUILD_DESC="addison_retail-user 8.0.0 OPNS27.76-12-22-9 10 release-keys" \
+    PRODUCT_NAME="Moto Z Play" \
     DEVICE_MAINTAINERS="marcost2"
 
-BUILD_FINGERPRINT := "motorola/addison_retail/addison:9/PPS29.133-30/ab8b4:user/release-keys"
+BUILD_FINGERPRINT := "motorola/addison_retail/addison:8.0.0/OPNS27.76-12-22-9/10:user/release-keys"
     # for specific
 $(call inherit-product, vendor/motorola/addison/addison-vendor.mk)
