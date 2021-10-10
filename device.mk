@@ -209,7 +209,7 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.addison
 
 # Lineage hardware
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.addison
 
 # Media
@@ -315,7 +315,7 @@ PRODUCT_PACKAGES += \
     libjson
 
 # PocketMode
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     MotoPocketMode
 
 # Protobuf
@@ -405,7 +405,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
 
 PRODUCT_COPY_FILES += \
-    #$(LOCAL_PATH)/configs/thermal-engine-addison.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+    $(LOCAL_PATH)/configs/thermal-engine-addison.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
 # Telephony
 PRODUCT_PACKAGES += \
